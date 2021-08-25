@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import SearchIcon from '@material-ui/icons/Search';
+import HomeIcon from '@material-ui/icons/Home';
 
 function Navbar() {
     return (
-        <div>
-            Navbar
-        </div>
+        <nav>
+            <div>
+                <SearchIcon />
+                <input type="text" />
+            </div>
+            <HomeIcon />
+        </nav>
     )
 }
 
