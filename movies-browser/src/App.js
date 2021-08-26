@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="bg-gray-300 min-h-screen">
-      <div className="w-full bg-darkgray max-w-5xl m-auto">
+    <div className="min-h-screen text-gray-light box-border px-2">
+      <div className="w-full max-w-4xl m-auto">
         <Router>
           <Navbar />
           <Switch>
