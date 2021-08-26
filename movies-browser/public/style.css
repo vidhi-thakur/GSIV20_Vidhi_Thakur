@@ -32230,6 +32230,13 @@ video {
   content: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
