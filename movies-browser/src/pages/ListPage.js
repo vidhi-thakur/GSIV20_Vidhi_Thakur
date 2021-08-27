@@ -21,8 +21,8 @@ function ListPage() {
         }
     }, [input])
 
-    const apiURL = "https://api.themoviedb.org/3/movie/upcoming?api_key=ec2002ddbbe47acdd0bd8fb216ffc072&language=en-US";
-    function getData() {
+    async function getData() {
+        const apiURL = "https://api.themoviedb.org/3/movie/upcoming?api_key=ec2002ddbbe47acdd0bd8fb216ffc072&language=en-US_page=1";
         fetch(apiURL).then(response => response.json()).then(responseJson => {
             setDataArray(responseJson.results);
             setInitialData(responseJson.results);
