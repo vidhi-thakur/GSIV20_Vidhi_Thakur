@@ -5,23 +5,24 @@ import DetailsPage from './pages/DetailsPage';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="min-h-screen text-gray-light box-border px-2">
-      <div className="w-full max-w-4xl m-auto">
-        <Router>
-          <Navbar />
-          <Switch>
-            <Route exact path="/">
-              <ListPage />
-            </Route>
-            <Route path="/:id/">
-              <DetailsPage />
-            </Route>
-          </Switch>
-        </Router>
+
+    return (
+      <div className="min-h-screen text-gray-light box-border px-2">
+        <div className="w-full max-w-4xl m-auto">
+          <Router>
+            <Navbar />
+            <Switch>
+              <Route exact path="/">
+                <ListPage />
+              </Route>
+              <Route path="/:id/">
+                <DetailsPage />
+              </Route>
+            </Switch>
+          </Router>
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
 export default App;
