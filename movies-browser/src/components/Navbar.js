@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import HomeIcon from '@material-ui/icons/Home';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
@@ -9,7 +10,9 @@ function Navbar() {
                 <SearchIcon />
                 <input placeholder="Search" type="text" className="bg-transparent p-1 outline-none flex-1" />
             </div>
-            <HomeIcon className="cursor-pointer" />
+            <Link to="/" >
+                <HomeIcon className="cursor-pointer" />
+            </Link>
         </nav>
     )
 }

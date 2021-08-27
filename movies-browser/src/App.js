@@ -11,10 +11,10 @@ function App() {
         <Router>
           <Navbar />
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <ListPage />
             </Route>
-            <Route path=":roomID">
+            <Route path="/:id/">
               <DetailsPage />
             </Route>
           </Switch>
