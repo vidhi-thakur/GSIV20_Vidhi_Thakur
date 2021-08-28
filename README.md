@@ -18,3 +18,5 @@ Step 3: Open the project and run command  `npm start`.
 1. Pagination
 1. Automated tests
 ## Live demo link: https://movies-browser-66e85.web.app/
+
+P.S. If you like the repo, do give it a star 🌟.
