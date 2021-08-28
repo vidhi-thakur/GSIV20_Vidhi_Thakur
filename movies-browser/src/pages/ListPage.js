@@ -5,6 +5,8 @@ import { useStateValue } from '../StateProvider'
 function ListPage() {
     const [dataArray, setDataArray] = useState([])
     const [initialData, setInitialData] = useState([])
+    const [loading, setLoading] = useState(false)
+    const [currentPage, setCurrentPage] = useState(1)
 
     const [{input}] = useStateValue();
 
@@ -22,10 +24,10 @@ function ListPage() {
     }, [input])
 
     async function getData() {
-        const apiURL = "https://api.themoviedb.org/3/movie/upcoming?api_key=ec2002ddbbe47acdd0bd8fb216ffc072&language=en-US_page=1";
+        const apiURL = `https://api.themoviedb.org/3/movie/upcoming?api_key=ec2002ddbbe47acdd0bd8fb216ffc072&language=en-US&page=${currentPage}`;
         fetch(apiURL).then(response => response.json()).then(responseJson => {
-            setDataArray(responseJson.results);
-            setInitialData(responseJson.results);
+            setDataArray(...dataArray, responseJson.results);
+            setInitialData(...initialData, responseJson.results);
         })
     }
 
@@ -34,14 +36,12 @@ function ListPage() {
             setDataArray(initialData);
         } else {
             let temp = dataArray.filter(item => item.title.toLowerCase().includes(text.toLowerCase()));
-            console.log("temp >>>", temp)
             setDataArray(temp);
-            console.log("dataArray >>>",dataArray)
         }
     }
 
     return (
-        <div className="flex flex-wrap justify-left pt-20">
+        <div className="flex flex-wrap justify-center lg:justify-start pt-20">
             {
                 dataArray.map(d => {
                     return (
