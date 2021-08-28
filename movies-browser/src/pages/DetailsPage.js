@@ -21,7 +21,7 @@ function DetailsPage() {
     }
 
     return (
-        <div className="pt-20 h-auto px-4 flex flex-col sm:flex-row justify-evenly">
+        <div className="pt-20 h-auto px-4 mb-8 flex flex-col sm:flex-row justify-evenly">
             <img className="sm:w-1/4 w-full max-h-h2 sm:max-h-h1" src={details.img} alt="poster" />
             <div className="sm:w-3/4 w-full py-2 sm:px-4 px-0 flex flex-col justify-between">
                 <h1 className="font-semibold text-4xl">{details.title}</h1>
