@@ -23,6 +23,7 @@ function ListPage() {
 
 
     function getData(pageNo) {
+        // const apiURL = "https://api.themoviedb.org/3/movie/top_rated?api_key=ec2002ddbbe47acdd0bd8fb216ffc072&language=en-US"
         const apiURL = `https://api.themoviedb.org/3/movie/upcoming?api_key=ec2002ddbbe47acdd0bd8fb216ffc072&language=en-US&page=${pageNo}`;
         fetch(apiURL).then(response => response.json()).then(responseJson => {
             setDataArray(...dataArray, responseJson.results);
